@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="Drone_Assembly">
+ <link name="base_link">
+  <inertial>
+   <origin rpy="0 0 0" xyz="9.3352E-08 -8.6507E-06 -0.020163"/>
+   <mass value="2.83"/>
+   <inertia ixx="0.020222" ixy="3.5918E-08" ixz="-7.5829E-11" iyy="0.011563" iyz="-5.9524E-09" izz="0.02802"/>
+  </inertial>
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 0"/>
+   <geometry>
+    <mesh filename="meshes/base_link.STL"/>
+   </geometry>
+  </visual>
+  <collision>
+   <origin rpy="0 0 0" xyz="0 0 0"/>
+   <geometry>
+    <mesh filename="meshes/base_link.STL"/>
+   </geometry>
+  </collision>
+ </link>
+ <link name="Prop_1">
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 0"/>
+   <geometry>
+    <mesh filename="meshes/Prop_1.STL"/>
+   </geometry>
+  </visual>
+ </link>
+ <joint name="Prop_1" type="continuous">
+  <origin rpy="0 0 0" xyz="0.23575 -0.27404 0.0070576"/>
+  <parent link="base_link"/>
+  <child link="Prop_1"/>
+  <axis xyz="0.061276 -0.10354 0.99274"/>
+  <limit effort="0" lower="0" upper="0" velocity="0"/>
+  <dynamics damping="0" friction="0"/>
+ </joint>
+ <link name="Prop_2">
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 0"/>
+   <geometry>
+    <mesh filename="meshes/Prop_2.STL"/>
+   </geometry>
+  </visual>
+ </link>
+ <joint name="Prop_2" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.23575 -0.27404 0.0070576"/>
+  <parent link="base_link"/>
+  <child link="Prop_2"/>
+  <axis xyz="0.081377 0.088619 0.99274"/>
+  <limit effort="0" lower="0" upper="0" velocity="0"/>
+  <dynamics damping="0" friction="0"/>
+ </joint>
+ <link name="Prop_3">
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 0"/>
+   <geometry>
+    <mesh filename="meshes/Prop_3.STL"/>
+   </geometry>
+  </visual>
+ </link>
+ <joint name="Prop_3" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.23575 0.27404 0.0070576"/>
+  <parent link="base_link"/>
+  <child link="Prop_3"/>
+  <axis xyz="0.091982 0.077554 -0.99274"/>
+  <limit effort="0" lower="0" upper="0" velocity="0"/>
+  <dynamics damping="0" friction="0"/>
+ </joint>
+ <link name="Prop_4">
+  <visual>
+   <origin rpy="0 0 0" xyz="0 0 0"/>
+   <geometry>
+    <mesh filename="meshes/Prop_4.STL"/>
+   </geometry>
+  </visual>
+ </link>
+ <joint name="Prop_4" type="continuous">
+  <origin rpy="0 0 0" xyz="0.23575 0.27404 0.0070576"/>
+  <parent link="base_link"/>
+  <child link="Prop_4"/>
+  <axis xyz="0.11976 -0.011499 0.99274"/>
+  <limit effort="0" lower="0" upper="0" velocity="0"/>
+  <dynamics damping="0" friction="0"/>
+ </joint>
+</robot>
